@@ -1,0 +1,23 @@
+.img-carousel{
+    border-radius: 20px;
+    object-fit: fill;
+}
+
+.titulo-carousel,
+.parrafo-carousel {
+    color: #fff;
+}
+
+.titulo-carousel{
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.parrafo-carousel{
+    font-size: 25px;
+}
+
+.next-button {
+    background-color: black;
+    margin-top: 8px;
+}

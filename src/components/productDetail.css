@@ -1,0 +1,28 @@
+.img-modalDetail {
+    width: 200px;
+    height: 300px;
+    object-fit: fill;
+}
+
+.container-modal {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px;
+    align-items: center;
+}
+
+.parrafo {
+    padding-left: 10px;
+}
+
+.container-rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-delivery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
