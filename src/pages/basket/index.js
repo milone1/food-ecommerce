@@ -6,6 +6,8 @@ import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 import swal from "sweetalert";
 
 const BasketView = () => {
+  let usuario = JSON.parse(localStorage.getItem("user"));
+
   const { basket, addOrRemoveProduct, deleteElementFromBasket } =
     useContext(UserContext);
 
@@ -82,7 +84,8 @@ const BasketView = () => {
         <Grid item md={4}>
           <Card>
             <CardContent>
-              <h4>Resumen de tu orden</h4>
+              <h4>Resumen de tu orden:</h4>
+              <h2>{usuario.nombre} {usuario.apellido}</h2>
               <p>
                 Sub-total productos <span>$ { total }</span>
               </p>

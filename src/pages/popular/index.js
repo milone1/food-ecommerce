@@ -6,6 +6,7 @@ import { getProductFood } from "../../service/firestore";
 import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 import ProductDetail from "../../components/productDetail";
 import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded';
+import Carrousel from "../../components/carousel";
 
 const Popular = () => {
     const { basket, storeBasket, deleteElementFromBasket } = useContext(UserContext);
@@ -44,6 +45,25 @@ const Popular = () => {
   return (
     <> 
     <Container maxWidth="xl">
+      <center>
+        <Carrousel />
+      </center>
+      <div className="container-tags">
+        <ul className="ul-tags">
+          <li>
+            <a href="/">Carnes</a>
+          </li>
+          <li>
+            <a href="/">Sopas</a>
+          </li>
+          <li>
+            <a href="/">Bebidas</a>
+          </li>
+          <li>
+            <a href="/">Dulces</a>
+          </li>
+        </ul>
+      </div>
       <Grid container spacing={3} mt={5}>
         <Grid item md={12} sm={12} xs={12}>
           <h2 className="center">POPULAR FOOD</h2>
@@ -53,7 +73,7 @@ const Popular = () => {
             <Grid item md={3} sm={6} xs={12}>
               <img className="product-photo" src={food.img_url} alt="" />
               <div className="description">
-                <p>{food.name}</p>
+                <p className="food-name">{food.name}</p>
                 <p className="container-buttons">
                   <span className="price">$ {food.price_sale}</span>
                   <span className="price-tacched">$ {food.price}</span>
