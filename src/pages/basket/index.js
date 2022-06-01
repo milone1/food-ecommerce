@@ -26,7 +26,7 @@ const BasketView = () => {
     swal({
       icon: "success",
       title: "Correcto",
-      text: "Se a pagado correctamente",
+      text: "Se pago correctamente",
     });
   }
 
@@ -40,7 +40,7 @@ const BasketView = () => {
     <Container maxWidth="xl">
       <Grid container spacing={3} mt={5}>
         <Grid item md={8}>
-          <h3>Bolsa de Compras </h3>
+          <h3>Bolsa de Compras de: {usuario.nombre} {usuario.apellido}</h3>
           <Grid container spacing={3}>
             {basket.length > 0 &&
             basket.map((product) => (
